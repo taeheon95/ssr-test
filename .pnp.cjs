@@ -52,6 +52,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react-router-dom", "npm:5.3.3"],\
             ["@types/testing-library__jest-dom", "npm:5.14.5"],\
             ["@types/webpack", "npm:5.28.0"],\
+            ["autoprefixer", "virtual:2991a69505bfa64267d1310684e200b51710ac29df4006682ca9b96b89b4f47e8218ba0ed19a09072291844a24cca73189f6bd7178dfe6c4d6218d6b6454e7b3#npm:10.4.7"],\
             ["babel-jest", "virtual:2991a69505bfa64267d1310684e200b51710ac29df4006682ca9b96b89b4f47e8218ba0ed19a09072291844a24cca73189f6bd7178dfe6c4d6218d6b6454e7b3#npm:27.5.1"],\
             ["babel-loader", "virtual:2991a69505bfa64267d1310684e200b51710ac29df4006682ca9b96b89b4f47e8218ba0ed19a09072291844a24cca73189f6bd7178dfe6c4d6218d6b6454e7b3#npm:8.2.5"],\
             ["babel-plugin-named-asset-import", "virtual:2991a69505bfa64267d1310684e200b51710ac29df4006682ca9b96b89b4f47e8218ba0ed19a09072291844a24cca73189f6bd7178dfe6c4d6218d6b6454e7b3#npm:0.3.8"],\
@@ -5809,10 +5810,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:095183937fc1d680fa9a5c8242589a2530b76908e533d34a97a339d3c2d1c095ba5ea16391678d67696e9f0a844ce378711940438e5889b00fc6305e4112bcc0#npm:10.4.7", {\
-          "packageLocation": "./.yarn/__virtual__/autoprefixer-virtual-8a54489eb6/0/cache/autoprefixer-npm-10.4.7-463a114196-0e55d0d198.zip/node_modules/autoprefixer/",\
+        ["virtual:2991a69505bfa64267d1310684e200b51710ac29df4006682ca9b96b89b4f47e8218ba0ed19a09072291844a24cca73189f6bd7178dfe6c4d6218d6b6454e7b3#npm:10.4.7", {\
+          "packageLocation": "./.yarn/__virtual__/autoprefixer-virtual-3e8e4dba28/0/cache/autoprefixer-npm-10.4.7-463a114196-0e55d0d198.zip/node_modules/autoprefixer/",\
           "packageDependencies": [\
-            ["autoprefixer", "virtual:095183937fc1d680fa9a5c8242589a2530b76908e533d34a97a339d3c2d1c095ba5ea16391678d67696e9f0a844ce378711940438e5889b00fc6305e4112bcc0#npm:10.4.7"],\
+            ["autoprefixer", "virtual:2991a69505bfa64267d1310684e200b51710ac29df4006682ca9b96b89b4f47e8218ba0ed19a09072291844a24cca73189f6bd7178dfe6c4d6218d6b6454e7b3#npm:10.4.7"],\
             ["@types/postcss", null],\
             ["browserslist", "npm:4.21.2"],\
             ["caniuse-lite", "npm:1.0.30001369"],\
@@ -13947,7 +13948,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@csstools/postcss-trigonometric-functions", "virtual:095183937fc1d680fa9a5c8242589a2530b76908e533d34a97a339d3c2d1c095ba5ea16391678d67696e9f0a844ce378711940438e5889b00fc6305e4112bcc0#npm:1.0.2"],\
             ["@csstools/postcss-unset-value", "virtual:095183937fc1d680fa9a5c8242589a2530b76908e533d34a97a339d3c2d1c095ba5ea16391678d67696e9f0a844ce378711940438e5889b00fc6305e4112bcc0#npm:1.0.2"],\
             ["@types/postcss", null],\
-            ["autoprefixer", "virtual:095183937fc1d680fa9a5c8242589a2530b76908e533d34a97a339d3c2d1c095ba5ea16391678d67696e9f0a844ce378711940438e5889b00fc6305e4112bcc0#npm:10.4.7"],\
+            ["autoprefixer", "virtual:2991a69505bfa64267d1310684e200b51710ac29df4006682ca9b96b89b4f47e8218ba0ed19a09072291844a24cca73189f6bd7178dfe6c4d6218d6b6454e7b3#npm:10.4.7"],\
             ["browserslist", "npm:4.21.2"],\
             ["css-blank-pseudo", "virtual:095183937fc1d680fa9a5c8242589a2530b76908e533d34a97a339d3c2d1c095ba5ea16391678d67696e9f0a844ce378711940438e5889b00fc6305e4112bcc0#npm:3.0.3"],\
             ["css-has-pseudo", "virtual:095183937fc1d680fa9a5c8242589a2530b76908e533d34a97a339d3c2d1c095ba5ea16391678d67696e9f0a844ce378711940438e5889b00fc6305e4112bcc0#npm:3.0.4"],\
@@ -15636,6 +15637,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react-router-dom", "npm:5.3.3"],\
             ["@types/testing-library__jest-dom", "npm:5.14.5"],\
             ["@types/webpack", "npm:5.28.0"],\
+            ["autoprefixer", "virtual:2991a69505bfa64267d1310684e200b51710ac29df4006682ca9b96b89b4f47e8218ba0ed19a09072291844a24cca73189f6bd7178dfe6c4d6218d6b6454e7b3#npm:10.4.7"],\
             ["babel-jest", "virtual:2991a69505bfa64267d1310684e200b51710ac29df4006682ca9b96b89b4f47e8218ba0ed19a09072291844a24cca73189f6bd7178dfe6c4d6218d6b6454e7b3#npm:27.5.1"],\
             ["babel-loader", "virtual:2991a69505bfa64267d1310684e200b51710ac29df4006682ca9b96b89b4f47e8218ba0ed19a09072291844a24cca73189f6bd7178dfe6c4d6218d6b6454e7b3#npm:8.2.5"],\
             ["babel-plugin-named-asset-import", "virtual:2991a69505bfa64267d1310684e200b51710ac29df4006682ca9b96b89b4f47e8218ba0ed19a09072291844a24cca73189f6bd7178dfe6c4d6218d6b6454e7b3#npm:0.3.8"],\
