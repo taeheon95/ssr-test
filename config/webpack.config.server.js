@@ -121,24 +121,39 @@ const config = {
           {
             test: /\.(js|mjs|jsx|ts|tsx)$/,
             include: paths.appSrc,
-            loader: require.resolve("babel-loader"),
-            options: {
-              customize: require.resolve(
-                "babel-preset-react-app/webpack-overrides"
-              ),
-              presets: [
-                [
-                  require.resolve("babel-preset-react-app"),
-                  {
-                    runtime: "automatic",
+            exclude: /(node_modules)/,
+            use: {
+              loader: "swc-loader",
+              options: {
+                jsc: {
+                  parser: {
+                    syntax: "typescript",
                   },
-                ],
-              ],
-              cacheDirectory: true,
-              cacheCompression: false,
-              compact: true,
+                },
+              },
             },
           },
+          // {
+          //   test: /\.(js|mjs|jsx|ts|tsx)$/,
+          //   include: paths.appSrc,
+          //   loader: require.resolve("babel-loader"),
+          //   options: {
+          //     customize: require.resolve(
+          //       "babel-preset-react-app/webpack-overrides"
+          //     ),
+          //     presets: [
+          //       [
+          //         require.resolve("babel-preset-react-app"),
+          //         {
+          //           runtime: "automatic",
+          //         },
+          //       ],
+          //     ],
+          //     cacheDirectory: true,
+          //     cacheCompression: false,
+          //     compact: true,
+          //   },
+          // },
           {
             test: cssRegex,
             exclude: cssModuleRegex,

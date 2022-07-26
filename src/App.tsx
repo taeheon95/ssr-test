@@ -1,10 +1,21 @@
 import React from "react";
+import { Route, Routes } from "react-router-dom";
+import Layout from "./Layout";
+import loadable from "@loadable/component";
+
+const Login = loadable(() => import("./pages/Login"));
 
 function App() {
   return (
-    <div className="m-5 bg-yellow-500 text-blue-500 font-bold">
-      배워서 나주는 React에 Tailwind Css 적용하기
-    </div>
+    <>
+      <Layout>
+        <Routes>
+          <Route index element={<div>index 페이지</div>} />
+          <Route path="login" element={<Login />} />
+          <Route path="logout" element={<div>로그아웃 페이지</div>} />
+        </Routes>
+      </Layout>
+    </>
   );
 }
 
