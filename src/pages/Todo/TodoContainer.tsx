@@ -6,96 +6,16 @@ import React, {
   useCallback,
   useReducer,
 } from "react";
+import { TodoAction, TodoState } from "./TodoIndex";
 import TodoPresenter from "./TodoPresenter";
 
-interface TodoState {
-  title: string;
-  size: number;
-  todoList: TodoItem[];
+interface Props {
+  todoState: TodoState;
+  dispatch: React.Dispatch<TodoAction>;
 }
 
-interface TodoItem {
-  id: number;
-  title: string;
-  done: boolean;
-  createAt: number;
-  updateAt: number;
-}
-
-const initialState: TodoState = {
-  title: "",
-  size: 0,
-  todoList: [],
-};
-
-type TodoAction =
-  | { type: "CHANGE_TODO"; payload: string }
-  | { type: "ADD_TODO" }
-  | { type: "CHANGE_IS_DONE"; payload: number }
-  | { type: "CHANGE_TITLE"; payload: { id: number; title: string } }
-  | { type: "DELETE_TODO"; payload: number };
-
-function todoReducer(state: TodoState, action: TodoAction) {
-  switch (action.type) {
-    case "CHANGE_TODO":
-      return {
-        ...state,
-        title: action.payload,
-      };
-    case "ADD_TODO":
-      return {
-        ...state,
-        size: state.size + 1,
-        todoList: [
-          ...state.todoList,
-          {
-            id:
-              state.todoList.length !== 0
-                ? state.todoList[state.todoList.length - 1].id + 1
-                : 0,
-            title: state.title,
-            done: false,
-            createAt: Date.now(),
-            updateAt: Date.now(),
-          },
-        ],
-      };
-    case "DELETE_TODO":
-      return {
-        ...state,
-        size: state.size - 1,
-        todoList: state.todoList.filter((todo) => todo.id !== action.payload),
-      };
-    case "CHANGE_IS_DONE":
-      return {
-        ...state,
-        todoList: state.todoList.map((todo) => {
-          if (todo.id === action.payload) {
-            todo.done = !todo.done;
-            todo.updateAt = Date.now();
-          }
-          return todo;
-        }),
-      };
-    case "CHANGE_TITLE":
-      return {
-        ...state,
-        todoList: state.todoList.map((todo) => {
-          if (todo.id === action.payload.id) {
-            todo.title = action.payload.title;
-            todo.updateAt = Date.now();
-          }
-          return todo;
-        }),
-      };
-    default:
-      return state;
-  }
-}
-
-function TodoContainer() {
-  const [todoState, dispatch] = useReducer(todoReducer, initialState);
-
+function TodoContainer(props: Props) {
+  const { dispatch, todoState } = props;
   const handleTodo = useCallback<ChangeEventHandler>(
     (e: ChangeEvent<HTMLInputElement>) => {
       dispatch({ type: "CHANGE_TODO", payload: e.target.value });
@@ -134,7 +54,16 @@ function TodoContainer() {
     []
   );
 
-  return <TodoPresenter />;
+  return (
+    <TodoPresenter
+      todoState={todoState}
+      handleTodo={handleTodo}
+      addTodo={addTodo}
+      deleteTodo={deleteTodo}
+      handleTodoIsDone={handleTodoIsDone}
+      handleTodoTitle={handleTodoTitle}
+    />
+  );
 }
 
 export default TodoContainer;

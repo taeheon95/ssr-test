@@ -1,2 +1,2 @@
-import Todo from "./TodoContainer";
+import Todo from "./TodoIndex";
 export default Todo;

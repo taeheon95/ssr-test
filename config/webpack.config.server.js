@@ -9,6 +9,7 @@ const modules = require("./modules");
 const getCSSModuleLocalIdent = require("react-dev-utils/getCSSModuleLocalIdent");
 const nodeExternals = require("webpack-node-externals");
 const getClientEnvironment = require("./env");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 const shouldUseSourceMap = process.env.GENERATE_SOURCEMAP !== "false";
 
@@ -133,27 +134,6 @@ const config = {
               },
             },
           },
-          // {
-          //   test: /\.(js|mjs|jsx|ts|tsx)$/,
-          //   include: paths.appSrc,
-          //   loader: require.resolve("babel-loader"),
-          //   options: {
-          //     customize: require.resolve(
-          //       "babel-preset-react-app/webpack-overrides"
-          //     ),
-          //     presets: [
-          //       [
-          //         require.resolve("babel-preset-react-app"),
-          //         {
-          //           runtime: "automatic",
-          //         },
-          //       ],
-          //     ],
-          //     cacheDirectory: true,
-          //     cacheCompression: false,
-          //     compact: true,
-          //   },
-          // },
           {
             test: cssRegex,
             exclude: cssModuleRegex,
@@ -261,7 +241,7 @@ const config = {
   },
   externals: [
     nodeExternals({
-      allowlist: [/@babel/],
+      allowlist: [/@swc/],
     }),
   ],
 };

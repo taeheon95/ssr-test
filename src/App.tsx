@@ -4,6 +4,7 @@ import Layout from "./Layout";
 import loadable from "@loadable/component";
 
 const Login = loadable(() => import("./pages/Login"));
+const Todo = loadable(() => import("./pages/Todo"));
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route index element={<div>index 페이지</div>} />
           <Route path="login" element={<Login />} />
           <Route path="logout" element={<div>로그아웃 페이지</div>} />
+          <Route path="todo" element={<Todo />} />
         </Routes>
       </Layout>
     </>

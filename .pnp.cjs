@@ -51,6 +51,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react", "npm:18.0.15"],\
             ["@types/react-dom", "npm:18.0.6"],\
             ["@types/react-router-dom", "npm:5.3.3"],\
+            ["@types/redux-logger", "npm:3.0.9"],\
             ["@types/testing-library__jest-dom", "npm:5.14.5"],\
             ["@types/webpack", "npm:5.28.0"],\
             ["autoprefixer", "virtual:2991a69505bfa64267d1310684e200b51710ac29df4006682ca9b96b89b4f47e8218ba0ed19a09072291844a24cca73189f6bd7178dfe6c4d6218d6b6454e7b3#npm:10.4.7"],\
@@ -91,6 +92,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-redux", "virtual:2991a69505bfa64267d1310684e200b51710ac29df4006682ca9b96b89b4f47e8218ba0ed19a09072291844a24cca73189f6bd7178dfe6c4d6218d6b6454e7b3#npm:8.0.2"],\
             ["react-refresh", "npm:0.11.0"],\
             ["react-router-dom", "virtual:2991a69505bfa64267d1310684e200b51710ac29df4006682ca9b96b89b4f47e8218ba0ed19a09072291844a24cca73189f6bd7178dfe6c4d6218d6b6454e7b3#npm:6.3.0"],\
+            ["redux-logger", "npm:3.0.6"],\
             ["resolve", "patch:resolve@npm%3A1.22.1#~builtin<compat/resolve>::version=1.22.1&hash=07638b"],\
             ["resolve-url-loader", "virtual:2991a69505bfa64267d1310684e200b51710ac29df4006682ca9b96b89b4f47e8218ba0ed19a09072291844a24cca73189f6bd7178dfe6c4d6218d6b6454e7b3#npm:4.0.0"],\
             ["sass-loader", "virtual:2991a69505bfa64267d1310684e200b51710ac29df4006682ca9b96b89b4f47e8218ba0ed19a09072291844a24cca73189f6bd7178dfe6c4d6218d6b6454e7b3#npm:12.6.0"],\
@@ -4835,6 +4837,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["@types/redux-logger", [\
+        ["npm:3.0.9", {\
+          "packageLocation": "./.yarn/cache/@types-redux-logger-npm-3.0.9-ac1d3f05fb-c41fdc0919.zip/node_modules/@types/redux-logger/",\
+          "packageDependencies": [\
+            ["@types/redux-logger", "npm:3.0.9"],\
+            ["redux", "npm:4.2.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["@types/resolve", [\
         ["npm:1.17.1", {\
           "packageLocation": "./.yarn/cache/@types-resolve-npm-1.17.1-9a8396bef2-dc6a6df507.zip/node_modules/@types/resolve/",\
@@ -7636,6 +7648,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/dedent-npm-0.7.0-2dbb45a4c5-87de191050.zip/node_modules/dedent/",\
           "packageDependencies": [\
             ["dedent", "npm:0.7.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["deep-diff", [\
+        ["npm:0.3.8", {\
+          "packageLocation": "./.yarn/cache/deep-diff-npm-0.3.8-a2a66d74dd-8a0fb6cbe4.zip/node_modules/deep-diff/",\
+          "packageDependencies": [\
+            ["deep-diff", "npm:0.3.8"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -14865,6 +14886,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["redux-logger", [\
+        ["npm:3.0.6", {\
+          "packageLocation": "./.yarn/cache/redux-logger-npm-3.0.6-4c0c652262-c40f63c44c.zip/node_modules/redux-logger/",\
+          "packageDependencies": [\
+            ["redux-logger", "npm:3.0.6"],\
+            ["deep-diff", "npm:0.3.8"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["redux-thunk", [\
         ["npm:2.4.1", {\
           "packageLocation": "./.yarn/cache/redux-thunk-npm-2.4.1-2ba08bf615-af5abb425f.zip/node_modules/redux-thunk/",\
@@ -15777,6 +15808,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react", "npm:18.0.15"],\
             ["@types/react-dom", "npm:18.0.6"],\
             ["@types/react-router-dom", "npm:5.3.3"],\
+            ["@types/redux-logger", "npm:3.0.9"],\
             ["@types/testing-library__jest-dom", "npm:5.14.5"],\
             ["@types/webpack", "npm:5.28.0"],\
             ["autoprefixer", "virtual:2991a69505bfa64267d1310684e200b51710ac29df4006682ca9b96b89b4f47e8218ba0ed19a09072291844a24cca73189f6bd7178dfe6c4d6218d6b6454e7b3#npm:10.4.7"],\
@@ -15817,6 +15849,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-redux", "virtual:2991a69505bfa64267d1310684e200b51710ac29df4006682ca9b96b89b4f47e8218ba0ed19a09072291844a24cca73189f6bd7178dfe6c4d6218d6b6454e7b3#npm:8.0.2"],\
             ["react-refresh", "npm:0.11.0"],\
             ["react-router-dom", "virtual:2991a69505bfa64267d1310684e200b51710ac29df4006682ca9b96b89b4f47e8218ba0ed19a09072291844a24cca73189f6bd7178dfe6c4d6218d6b6454e7b3#npm:6.3.0"],\
+            ["redux-logger", "npm:3.0.6"],\
             ["resolve", "patch:resolve@npm%3A1.22.1#~builtin<compat/resolve>::version=1.22.1&hash=07638b"],\
             ["resolve-url-loader", "virtual:2991a69505bfa64267d1310684e200b51710ac29df4006682ca9b96b89b4f47e8218ba0ed19a09072291844a24cca73189f6bd7178dfe6c4d6218d6b6454e7b3#npm:4.0.0"],\
             ["sass-loader", "virtual:2991a69505bfa64267d1310684e200b51710ac29df4006682ca9b96b89b4f47e8218ba0ed19a09072291844a24cca73189f6bd7178dfe6c4d6218d6b6454e7b3#npm:12.6.0"],\

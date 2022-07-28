@@ -13,7 +13,7 @@ const manifest = JSON.parse(
 const chunks = Object.keys(manifest.files)
   .filter((key) => /chunk\.js$/.exec(key))
   .map((key) => `<script src=${manifest.files[key]}></script>`)
-  .join("");
+  .join("\n");
 
 function createPage(root: string) {
   return `<!DOCTYPE html>
