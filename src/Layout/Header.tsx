@@ -34,9 +34,15 @@ function Header() {
             </Link>
             <Link
               to="todo"
-              className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white"
+              className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
             >
               todo
+            </Link>
+            <Link
+              to="calendar"
+              className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white"
+            >
+              calendar
             </Link>
           </div>
           <div className="mr-2">

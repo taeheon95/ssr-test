@@ -75,7 +75,7 @@ function LoginPresenter(props: Props) {
 
             <div className="text-sm">
               <Link
-                to=""
+                to="/"
                 className="font-medium text-indigo-600 hover:text-indigo-500"
               >
                 Forgot your password?
@@ -112,4 +112,4 @@ function LoginPresenter(props: Props) {
   );
 }
 
-export default LoginPresenter;
+export default React.memo(LoginPresenter);

@@ -52,6 +52,12 @@ function TodoPresenter(props: Props) {
             type="checkbox"
             onChange={handleTodoIsDone(todo.id)}
           />
+          <button
+            className="bg-teal-400 rounded-md"
+            onClick={deleteTodo(todo.id)}
+          >
+            삭제
+          </button>
         </div>
       ))}
     </div>

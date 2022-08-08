@@ -1,11 +1,4 @@
-import React, {
-  ChangeEvent,
-  ChangeEventHandler,
-  MouseEvent,
-  MouseEventHandler,
-  useCallback,
-  useReducer,
-} from "react";
+import React, { ChangeEvent, ChangeEventHandler, useCallback } from "react";
 import { TodoAction, TodoState } from "./TodoIndex";
 import TodoPresenter from "./TodoPresenter";
 
@@ -20,18 +13,18 @@ function TodoContainer(props: Props) {
     (e: ChangeEvent<HTMLInputElement>) => {
       dispatch({ type: "CHANGE_TODO", payload: e.target.value });
     },
-    []
+    [dispatch]
   );
 
   const addTodo = useCallback(() => {
     dispatch({ type: "ADD_TODO" });
-  }, []);
+  }, [dispatch]);
 
   const deleteTodo = useCallback(
     (id: number) => () => {
       dispatch({ type: "DELETE_TODO", payload: id });
     },
-    []
+    [dispatch]
   );
 
   const handleTodoTitle = useCallback(
@@ -41,7 +34,7 @@ function TodoContainer(props: Props) {
         payload: { id, title: e.target.value },
       });
     },
-    []
+    [dispatch]
   );
 
   const handleTodoIsDone = useCallback(
@@ -51,7 +44,7 @@ function TodoContainer(props: Props) {
         payload: id,
       });
     },
-    []
+    [dispatch]
   );
 
   return (
@@ -66,4 +59,4 @@ function TodoContainer(props: Props) {
   );
 }
 
-export default TodoContainer;
+export default React.memo(TodoContainer);
